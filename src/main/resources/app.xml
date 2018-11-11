@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="owner" class="hillel.com.beans.Owner">
+        <property name="storage" ref="bookStorage"/>
+
+    </bean>
+
+
+    <!--<bean id="owner" class="hillel.com.beans.Owner">-->
+        <!--<property name="book" ref="fantasyBook" />-->
+        <!--<property name="storage" ref="bookStorage"/>-->
+
+        <!--<constructor-arg index="0" ref="fantasyBook"/>-->
+        <!--<constructor-arg index="1" ref="bookStorage"/>-->
+
+    <!--</bean>-->
+
+    <bean id="horrorBook" class="hillel.com.beans.HorrorBook" />
+    <bean id="fantasyBook" class="hillel.com.beans.FantasyBook" />
+    <bean id="scienceBook" class="hillel.com.beans.ScienceBook" />
+    <bean id="bookStorage" class="hillel.com.beans.Storage"/>
+
+
+
+</beans>
